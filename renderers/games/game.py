@@ -102,7 +102,8 @@ def __render_batter_text(canvas, layout, colors, batter, text_pos):
         text_pos + offset,
         center=False,
     )
-    graphics.DrawText(canvas, font["font"], coords["x"], coords["y"], color, "AB:")
+    # Removed "AB" from string in last argument:
+    graphics.DrawText(canvas, font["font"], coords["x"], coords["y"], color, "")
     return pos
 
 
@@ -128,7 +129,8 @@ def __render_pitcher_text(canvas, layout, colors, pitcher, pitches: Pitches, tex
         text_pos,
         center=False,
     )
-    graphics.DrawText(canvas, font["font"], coords["x"], coords["y"], color, "P:")
+    # Removed "P" from string in last argument:
+    graphics.DrawText(canvas, font["font"], coords["x"], coords["y"], color, "")
     return pos
 
 
